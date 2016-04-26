@@ -1,23 +1,27 @@
 
 feature 'Enter names' do
   scenario 'submitting names' do
-    visit('/')
-    fill_in :name1, with: 'Gerrard'
-    fill_in :name2, with: 'Mittens'
-    click_button 'Raise your Gauntlets'
-    expect(page).to have_content 'Gerrard finds him/herself eye to eye with the stealy gaze of Mittens'
+    sign_in_and_play
+    expect(page).to have_content 'Marmaduke finds him/herself eye to eye with the stealy gaze of Eugene'
   end
   scenario 'default names' do
     visit('/')
     click_button 'Raise your Gauntlets'
-    expect(page).to have_content 'Jo finds him/herself eye to eye with the stealy gaze of Fergus'
+    expect(page).to have_content 'Marmaduke finds him/herself eye to eye with the stealy gaze of Eugene'
   end
 end
 
 feature 'Display hit points' do
   scenario 'player2' do
-    visit('/')
-    click_button 'Raise your Gauntlets'
-    expect(page).to have_content 'Fergus: 100HP'
+    sign_in_and_play
+    expect(page).to have_content 'Eugene: 100HP'
+  end
+end
+
+feature 'Attacking' do
+  scenario 'player 1 confirmation' do
+    sign_in_and_play
+    click_button 'Whack'
+    expect(page).to have_content 'Ouch, Marmaduke that really hurts'
   end
 end
