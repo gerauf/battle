@@ -12,8 +12,4 @@ class Player
     @hp -= 10
   end
 
-  def whallop player
-    player.been_hit
-  end
-
 end
