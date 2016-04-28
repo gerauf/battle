@@ -1,13 +1,13 @@
-<body background = "http://i.giphy.com/WzLsZENLbKeBO.gif">
+<body>
 <div align="center">
   <h1>
     <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
   </h1>
   <div>
-    <%= @game.player_1.name %> has 60HP
+    <%= @game.player_1.name %> has <%= @game.player_1.hp %>HP
   </div>
   <div>
-    <%= @game.player_2.name %> has 60HP
+    <%= @game.player_2.name %> has <%= @game.player_2.hp %>HP
   </div>
 
 

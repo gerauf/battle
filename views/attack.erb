@@ -1,4 +1,4 @@
-<body background = "http://i.giphy.com/WzLsZENLbKeBO.gif">
+<body>
 <div align="center">
   <h1> <%= @game.player_1.name %> punched <%= @game.player_2.name %> in the face! WTF?! </h1>
   <img src='http://i.imgur.com/23pJ3sz.gif'>
@@ -13,7 +13,6 @@
     <div>
       <label for = "Attack back"><%= @game.player_2.name %>, get up and do something you lazy S.O.B!</label>
       <br>
-      <% @game.switch %>
       <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
     </div>
   </form>

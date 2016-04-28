@@ -21,12 +21,5 @@ describe Game do
     end
   end
 
-  describe "#switch" do
-      it "swaps player 1 and player 2" do
-        game.switch
-        expect(game.player_1).to be ross
-        expect(game.player_2).to be bob
-      end
-  end
-  
+
 end

@@ -20,12 +20,6 @@ describe Player do
       end
     end
 
-    describe "#whallop" do
-      it "damages the other player" do
-        expect(ross).to receive(:been_hit)
-        bob.whallop ross
-      end
-    end
 
 
 
