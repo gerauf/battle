@@ -25,15 +25,20 @@ describe Game do
     it "first turn returns player 1" do
       expect(game.current_player).to eq bob
     end
+  end
 
+  describe "#defensive_player" do
+    it "first turn returns player 2" do
+      expect(game.defensive_player).to eq ross
+    end
   end
 
   describe "#switch_player" do
-    it "should flip the current_player" do
+    it "should flip the current and defensive player" do
       game.switch_player
       expect(game.current_player).to eq ross
+      expect(game.defensive_player).to eq bob
     end
-
   end
 
 end

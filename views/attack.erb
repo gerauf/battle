@@ -1,6 +1,8 @@
+<link href="/styles.css" type="text/css" rel="stylesheet">
+
 <body>
 <div align="center">
-  <h1> <%= @game.player_1.name %> punched <%= @game.player_2.name %> in the face! WTF?! </h1>
+  <h1> <%= @game.current_player.name %> punched <%= @game.defensive_player.name %> in the face! WTF?! </h1>
   <img src='http://i.imgur.com/23pJ3sz.gif'>
 
   <div>
@@ -9,15 +11,16 @@
     <%= @game.player_2.name %> has <%= @game.player_2.hp %>HP left
   </div>
 
-  <form action= "/attack" >
+  <form action= "/switch_turns" >
     <div>
-      <label for = "Attack back"><%= @game.player_2.name %>, get up and do something you lazy S.O.B!</label>
+      <label for = "Attack back"><%= @game.defensive_player.name %>, get up and do something you lazy S.O.B!</label>
       <br>
       <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
     </div>
   </form>
 
-  <p><%= @game.current_player.name %> it's your turn. To fight.</p>
+
+  <p><%= @game.defensive_player.name %> it's your turn. To fight.</p>
 
 </div>
 </body>
