@@ -1,6 +1,10 @@
 class Game
   attr_reader :player_1, :player_2, :current_player, :defensive_player
 
+  def self.class_method
+
+  end
+
   def initialize player_1, player_2
     @player_1 = player_1
     @player_2 = player_2
@@ -18,7 +22,7 @@ class Game
   end
 
   private
-  
+
   def switch player_type
     (player_type == player_1 ? player_2 : player_1)
   end
